@@ -8,8 +8,8 @@ logging.basicConfig(filename='smtp_log.txt', level=logging.DEBUG)
 smtp_server = 'smtp.office365.com'
 smtp_port = 587
 
-username = 'marcelinosalim.205025@mhs.its.ac.id'
-password = '#Asdfexnh25'
+username = 'email@mhs.its.ac.id'
+password = 'pass'
 
 server = smtplib.SMTP(smtp_server, smtp_port)
 
@@ -25,7 +25,7 @@ try:
     server.login(username, password)
 
     from_addr = username
-    to_addr = 'marcelinosalim25@gmail.com'
+    to_addr = 'email@gmail.com'
     subject = 'Subject: Test Email'
     body = 'This is a test email sent from Python script.'
     msg = f'{subject}\n\n{body}'
